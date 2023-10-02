@@ -1,0 +1,69 @@
+package lista2poo;
+
+import java.util.Scanner;
+
+import entity.Information;
+
+public class empresa {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Information inf = new Information();
+		
+		
+		
+		
+		 while (true) {
+			 System.out.println("Deseja cadastrar uma empresa? (ou 0 para sair)");
+	         inf.nome = sc.nextLine();
+	         
+
+	            if (inf.nome.equals("0")) {
+	                break;
+	            }
+
+	            System.out.println("CNPJ: ");
+	            inf.cnpj= sc.nextLine();
+
+	            System.out.println("Renda Bruta: ");
+	            inf.rendaB = sc.nextDouble();
+	            sc.nextLine(); 
+	          
+	            
+	            System.out.println(inf);
+	        }
+
+		
+		
+		
+		
+		
+		
+		sc.close();
+	}
+
+}
+
+============================================
+package entity;
+
+public class Information {
+public String nome;
+public String cnpj;
+public double rendaB;  
+public boolean cadastro;
+public boolean repetir;
+
+
+public String toString() {
+	
+	return "\nNome da Empresa: " + nome
+			+ "\nCNPJ: " + cnpj
+			+ "\nRenda Bruta: " + rendaB;
+	
+	
+}
+}
+
+
